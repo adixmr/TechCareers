@@ -10,3 +10,12 @@ exports.lever = async (company) => {
     return jobs.data;
 }
 
+exports.greenhouse = async (company) => {
+    let jobs = await axios.get('https://boards-api.greenhouse.io/v1/boards/'+company+'/jobs')
+    return jobs.data;
+}
+
+exports.workable = async (company) => {
+    let jobs = await axios.get('https://apply.workable.com/api/v1/accounts/'+company+'?full=true')
+    return jobs.data;
+}

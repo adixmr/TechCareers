@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const platform = require('../crawler/platform')
+const standalone = require('../crawler/standalone')
 
-router.get('/:platform/:company', async (req, res) => {
+router.get('/:company', async (req, res) => {
     try {
-        let jobs = await platform[req.params.platform](req.params.company)
+        let jobs = await standalone[req.params.company]()
         res.send(jobs)
     } catch (err) {
         console.error(err)

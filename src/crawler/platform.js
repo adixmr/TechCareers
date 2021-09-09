@@ -1,4 +1,5 @@
-const axios = require('axios')
+const axios = require('axios');
+const { param } = require('../routes/platform');
 
 exports.skillate = async (company) => {
     let jobs = await axios.get('https://'+company+'.skillate.com/api/jobs')
@@ -19,3 +20,21 @@ exports.workable = async (company) => {
     let jobs = await axios.get('https://apply.workable.com/api/v1/accounts/'+company+'?full=true')
     return jobs.data;
 }
+
+exports.mynexthire = async (company) => {
+    let jobs = await axios.post('https://'+company+'.mynexthire.com/employer/careers/reqlist/get', {"source":"careers","code":"","filterByBuId":-1})
+    return jobs.data;
+}
+
+exports.freshteam = async (company) => {
+    let jobs = await axios.post('https://'+company+'.freshteam.com/hire/widgets/jobs.json')
+    return jobs.data;
+}
+
+exports.paramai = async (company) => {
+    let jobs = await axios.post('https://'+company+'.app.param.ai/api/career/get_job/')
+    return jobs.data;
+}
+
+ 
+

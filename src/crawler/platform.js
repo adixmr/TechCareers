@@ -27,12 +27,12 @@ exports.mynexthire = async (company) => {
 }
 
 exports.freshteam = async (company) => {
-    let jobs = await axios.post('https://'+company+'.freshteam.com/hire/widgets/jobs.json')
+    let jobs = await axios.get('https://'+company+'.freshteam.com/hire/widgets/jobs.json')
     return jobs.data;
 }
 
 exports.paramai = async (company) => {
-    let jobs = await axios.post('https://'+company+'.app.param.ai/api/career/get_job/')
+    let jobs = await axios.get('https://'+company+'.app.param.ai/api/career/get_job/')
     return jobs.data;
 }
 

@@ -10,7 +10,7 @@ exports.tata1mg = async () => {
     return jobs.data;
 }
 
-exports.unacdemy = async () => {
+exports.unacademy = async () => {
     let jobs = await axios.get('https://0qv3y4glfd.execute-api.us-east-1.amazonaws.com/gamma/spi/v3/jobs?limit=100&state=published&include_fields=employment_type')
     return jobs.data;
 }

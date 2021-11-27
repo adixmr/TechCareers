@@ -3,7 +3,7 @@ module.exports = {
     //unacdemy: 'standalone',
     grofers: 'skillate',
     ola: 'skillate',
-    Paytm: 'lever',
+    paytm: 'lever',
     cred: 'lever',
     zeta: 'lever',
     razorpay: 'mynexthire',

@@ -132,5 +132,19 @@ exports.freshteam = async (company) => {
 
 exports.paramai = async (company) => {
     let jobs = await axios.get('https://'+company+'.app.param.ai/api/career/get_job/')
-    return jobs.data;
+    
+    jobs = jobs.data.data.Engineering.jobs.map((job) => {
+        return {
+            job_id: job.id,
+            title: job.title,
+            description: job.description,
+            location: job.locations[0],
+            company,
+            platform: 'paramai',
+            apply_url: `https://${company}.app.param.ai/jobs/${job.slug}`,
+            created_at: job.created_at,
+        }
+    })
+    
+    return jobs;
 }

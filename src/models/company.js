@@ -5,4 +5,4 @@ let CompanySchema = new mongoose.Schema({
     logo: String
 })
 
-module.exports =  mongoose.model('Company', CompanySchema);
+module.exports =  mongoose.model('Companies', CompanySchema);

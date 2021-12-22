@@ -68,15 +68,15 @@
                                         <img src="/image/<%= job.details.company %>" class="img-fluid"
                                             style="margin-right: 40px; width: 100px;">
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html">
+                                            <a href="/job/<%= job.id %>">
                                                 <h4><%= job.details.title %></h4>
                                             </a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                                    <p> <i class="fa fa-map-marker"></i> <%= job.location %></p>
                                                 </div>
                                                 <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                                    <p> <i class="fa fa-clock-o"></i> Full-time</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -84,7 +84,7 @@
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a href="/job/<%= job.id %>" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>

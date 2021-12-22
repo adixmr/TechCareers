@@ -65,9 +65,16 @@
                                 </div>
 
                                 <div class="sldier_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <button type="submit" class="boxed-btn3">Find matching jobs</button>
+                                    <button style="margin-left: 20px;" id="subb" onclick="append()" type="submit"
+                                        class="boxed-btn3">Find matching jobs</button>
                                 </div>
                             </form>
+                            <script>
+                                function append() {
+                                    document.getElementById("subb").innerHTML =
+                                        'Finding jobs for you <img style="margin-left: 10px;" src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg">';
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>

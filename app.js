@@ -23,6 +23,7 @@ app.use('/platform/', require('./src/routes/platform'))
 app.use('/standalone/', require('./src/routes/standalone'))
 app.use('/update/', require('./src/routes/update'))
 app.use('/recommend/', require('./src/routes/recommend'))
+app.use('/job/', require('./src/routes/job'))
 
 app.listen('3000', (req, res) => {
     console.log(`server started`)

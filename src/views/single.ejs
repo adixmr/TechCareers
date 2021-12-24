@@ -68,11 +68,13 @@
                   <a href="/job/<%= job.id %>">
                     <h4><%= job.title %></h4>
                   </a>
+                  <% if(job.location) { %>
                   <div class="links_locat d-flex align-items-center">
                     <div class="location">
                       <p> <i class="fa fa-map-marker"></i> <%= job.location %></p>
                     </div>
                   </div>
+                  <% } %>
                 </div>
               </div>
               <div class="jobs_right">
@@ -96,12 +98,17 @@
             </div>
             <div class="job_content">
               <ul>
+                <% if(job.location) { %>
                 <li>Location: <span><%= job.location %></span></li>
+                <% } %>
                 <li>Job Type: <span> Full-time</span></li>
                 <li>Internal Job ID: <span> <%= job.job_id %> </span></li>
               </ul>
             </div>
             <div class="submit_btn">
+              <%
+              job.apply_url = job.company=='pharmeasy' ? job.apply_url.replace('jobs','jobs/') : job.apply_url;
+              %>
               <button onclick='top.location.href="<%= job.apply_url %>"' class="boxed-btn3 w-100" type="submit">Apply
                 Now</button>
             </div>
